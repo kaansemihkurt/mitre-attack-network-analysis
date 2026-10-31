@@ -1,0 +1,23 @@
+{
+  "source": "MITRE ATT&CK Enterprise STIX 2.1 (github.com/mitre/cti)",
+  "attack_version": "20.0",
+  "url": "https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v20.0/enterprise-attack/enterprise-attack.json",
+  "sha256": "66f3fe3f07ef1a2de0bd2fe4b3e8a9ea06c1d0bb2c46171bdbb57c7f7b666524",
+  "built_at_utc": "2026-10-29T22:32:43+00:00",
+  "license": "MITRE ATT&CK Terms of Use — © The MITRE Corporation. Reproduced and distributed with the permission of The MITRE Corporation.",
+  "active_groups_total": 178,
+  "active_techniques_total": 706,
+  "groups_in_network": 174,
+  "techniques_in_network": 515,
+  "subtechniques_in_network": 335,
+  "nodes": 689,
+  "edges": 4815,
+  "group_projection": {
+    "nodes": 174,
+    "edges": 11776
+  },
+  "technique_projection": {
+    "nodes": 515,
+    "edges": 45864
+  }
+}

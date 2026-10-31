@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MITRE ATT&amp;CK Tehdit Grubu–Teknik Ağı · Kaan Semih Kurt</title>
+<style>
+  :root{--bg:#0b1220;--panel:#111a2e;--panel2:#16213a;--line:#24324f;--text:#e6ecf7;--muted:#93a3c0;--acc:#5aa9ff;--warn:#f6ad55}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  header{display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,#0d1730,#0b1220)}
+  header h1{font-size:16px;margin:0;font-weight:650;letter-spacing:.2px}
+  header .sub{color:var(--muted);font-size:12px}
+  header .sp{flex:1}
+  .lang button{background:transparent;border:1px solid var(--line);color:var(--muted);padding:4px 10px;cursor:pointer;font-weight:600}
+  .lang button:first-child{border-radius:6px 0 0 6px}.lang button:last-child{border-radius:0 6px 6px 0}
+  .lang button.on{background:var(--acc);color:#04101f;border-color:var(--acc)}
+  main{display:grid;grid-template-columns:270px 1fr 340px;height:calc(100% - 53px)}
+  aside{background:var(--panel);border-right:1px solid var(--line);overflow:auto;padding:14px}
+  #detail{border-right:none;border-left:1px solid var(--line)}
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin:16px 0 8px}
+  h2:first-child{margin-top:0}
+  input[type=search]{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--panel2);color:var(--text);outline:none}
+  input[type=search]:focus{border-color:var(--acc)}
+  .row{display:flex;align-items:center;gap:8px;margin:6px 0;cursor:pointer;user-select:none}
+  .row input{accent-color:var(--acc)}
+  .comm{display:flex;align-items:flex-start;gap:8px;padding:6px 8px;border-radius:8px;cursor:pointer;border:1px solid transparent}
+  .comm:hover{background:var(--panel2)}
+  .comm.on{border-color:var(--acc);background:var(--panel2)}
+  .dot{width:11px;height:11px;border-radius:50%;flex:none;margin-top:4px}
+  .comm small{color:var(--muted)}
+  #cy{width:100%;height:100%;background:radial-gradient(circle at 50% 45%,#101b33 0%,#0b1220 70%)}
+  .stats{color:var(--muted);font-size:12px}
+  .stats b{color:var(--text)}
+  .hint{color:var(--muted);font-size:12px;margin-top:8px}
+  .card{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:12px}
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;background:#1d2a47;color:var(--muted);margin:2px 4px 2px 0}
+  .kv{display:grid;grid-template-columns:1fr auto;gap:4px 10px;font-size:13px}
+  .kv span:nth-child(odd){color:var(--muted)}
+  #detail h3{margin:0 0 4px;font-size:18px}
+  #detail a{color:var(--acc)}
+  .nb{display:flex;justify-content:space-between;gap:8px;padding:4px 6px;border-radius:6px;cursor:pointer;font-size:13px}
+  .nb:hover{background:#1d2a47}
+  .nb small{color:var(--muted)}
+  .prio{color:var(--warn);font-weight:700}
+  button.reset{width:100%;margin-top:10px;padding:7px;border-radius:8px;border:1px solid var(--line);background:var(--panel2);color:var(--text);cursor:pointer}
+  button.reset:hover{border-color:var(--acc)}
+  footer{position:fixed;bottom:6px;left:286px;color:#5d6b88;font-size:11px;pointer-events:none}
+  @media (max-width:900px){main{grid-template-columns:1fr;grid-template-rows:auto 60vh auto;height:auto}#cy{height:60vh}footer{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1 data-i18n="title"></h1>
+    <div class="sub" data-i18n="subtitle"></div>
+  </div>
+  <div class="sp"></div>
+  <div class="lang"><button id="btn-tr" class="on">TR</button><button id="btn-en">EN</button></div>
+</header>
+<main>
+  <aside>
+    <h2 data-i18n="search"></h2>
+    <input id="q" type="search" list="names" autocomplete="off">
+    <datalist id="names"></datalist>
+    <div class="hint" data-i18n="searchHint"></div>
+
+    <h2 data-i18n="show"></h2>
+    <label class="row"><input type="checkbox" id="showG" checked><span data-i18n="groups"></span></label>
+    <label class="row"><input type="checkbox" id="showT" checked><span data-i18n="techniques"></span></label>
+    <label class="row"><input type="checkbox" id="prio"><span data-i18n="prio"></span></label>
+
+    <h2 data-i18n="communities"></h2>
+    <div id="comms"></div>
+    <button class="reset" id="reset" data-i18n="reset"></button>
+
+    <h2 data-i18n="about"></h2>
+    <div class="stats" id="stats"></div>
+    <div class="hint" data-i18n="howto"></div>
+  </aside>
+  <div id="cy"></div>
+  <aside id="detail"></aside>
+</main>
+<footer data-i18n="footer"></footer>
+
+<script>/*__CYTOSCAPE__*/</script>
+<script>
+const DATA = /*__DATA__*/;
+const COLORS = ["#5aa9ff","#f6ad55","#68d391","#f687b3","#b794f4","#4fd1c5","#fc8181","#faf089"];
+const I18N = {
+  tr:{title:"MITRE ATT&CK Tehdit Grubu – Teknik Ağı",subtitle:"İki parçalı ağ analizi · ATT&CK v"+DATA.meta.attack_version+" · Kaan Semih Kurt",
+      search:"Ara",searchHint:"Grup veya teknik adı / kimliği yazın (ör. APT29, T1059.001)",show:"Göster",groups:"Tehdit grupları (renkli)",
+      techniques:"Teknikler (gri)",prio:"Öncelikli 20 tekniği vurgula",communities:"Grup toplulukları (Leiden)",reset:"Filtreleri sıfırla",
+      about:"Ağ hakkında",howto:"Bir düğüme tıklayın: komşuları vurgulanır ve sağda ayrıntılar açılır. Tekerlekle yakınlaştırın, sürükleyerek gezinin.",
+      footer:"Veri: MITRE ATT&CK® (© The MITRE Corporation, izinle yeniden dağıtılmıştır) · Görselleştirme: Cytoscape.js",
+      nodes:"düğüm",edges:"kenar",group:"Tehdit grubu",technique:"Teknik",subtech:"Alt-teknik",degreeG:"Kullandığı teknik",degreeT:"Kullanan grup",
+      btw:"Betweenness",pr:"PageRank",community:"Topluluk",jc:"Jaccard kümesi",tactics:"Taktikler",platforms:"Platformlar",aliases:"Diğer adlar",
+      greedy:"Kapsama önceliği (k=1)",greedy3:"Uygulanabilir öncelik (k=3)",neighborsG:"Kullandığı teknikler",neighborsT:"Kullanan gruplar",
+      desc:"MITRE açıklaması (İngilizce)",open:"ATT&CK sayfasını aç",empty:"Ayrıntı görmek için ağda bir düğüme tıklayın ya da arama yapın.",
+      all:"Tümü",groupsN:"grup",mainQ:"Araştırma soruları",q1:"Sınırlı bütçeli bir savunma ekibi hangi teknikleri önce tespit etmeli?",
+      q2:"Hangi tehdit grupları benzer davranıyor?",prioInfo:"Turuncu çerçeve: açgözlü kapsama analizinin önerdiği ilk 20 tespit edilebilir teknik (her grubu en az 3 tekniğinden yakalama hedefi).",
+      more:"daha"},
+  en:{title:"MITRE ATT&CK Threat Group – Technique Network",subtitle:"Bipartite network analysis · ATT&CK v"+DATA.meta.attack_version+" · Kaan Semih Kurt",
+      search:"Search",searchHint:"Type a group or technique name / ID (e.g. APT29, T1059.001)",show:"Show",groups:"Threat groups (colored)",
+      techniques:"Techniques (grey)",prio:"Highlight top-20 priority techniques",communities:"Group communities (Leiden)",reset:"Reset filters",
+      about:"About the network",howto:"Click a node to highlight its neighbours and open details on the right. Scroll to zoom, drag to pan.",
+      footer:"Data: MITRE ATT&CK® (© The MITRE Corporation, reproduced with permission) · Visualisation: Cytoscape.js",
+      nodes:"nodes",edges:"edges",group:"Threat group",technique:"Technique",subtech:"Sub-technique",degreeG:"Techniques used",degreeT:"Groups using it",
+      btw:"Betweenness",pr:"PageRank",community:"Community",jc:"Jaccard cluster",tactics:"Tactics",platforms:"Platforms",aliases:"Aliases",
+      greedy:"Coverage priority (k=1)",greedy3:"Actionable priority (k=3)",neighborsG:"Techniques used",neighborsT:"Groups using it",
+      desc:"MITRE description",open:"Open ATT&CK page",empty:"Click a node in the network or search to see details.",
+      all:"All",groupsN:"groups",mainQ:"Research questions",q1:"Which techniques should a defence team with a limited budget detect first?",
+      q2:"Which threat groups behave similarly?",prioInfo:"Orange ring: the first 20 detectable techniques suggested by the greedy coverage analysis (goal: catch every group through at least 3 of its techniques).",
+      more:"more"}
+};
+let LANG = "tr", activeComm = null, selected = null;
+const T = k => I18N[LANG][k] || k;
+const byId = Object.fromEntries(DATA.nodes.map(n => [n.id, n]));
+const commName = c => { const x = DATA.communities.find(o => o.id === c); return x ? x[LANG] : "—"; };
+const jcName = c => { const x = (DATA.jclusters || []).find(o => o.id === c); return x ? x[LANG] : "—"; };
+const maxDegT = Math.max(...DATA.nodes.filter(n => n.type === "technique").map(n => n.deg));
+const maxDegG = Math.max(...DATA.nodes.filter(n => n.type === "group").map(n => n.deg));
+
+const elements = [];
+for (const n of DATA.nodes) {
+  const isG = n.type === "group";
+  const size = isG ? 10 + 30 * Math.sqrt(n.deg / maxDegG) : 4 + 22 * Math.sqrt(n.deg / maxDegT);
+  elements.push({group: "nodes", data: {id: n.id, label: isG ? n.name : n.id, type: n.type, size,
+                  color: isG ? COLORS[n.comm % COLORS.length] : "#8b9bb8", comm: n.comm,
+                  prio: n.greedy3 && n.greedy3 <= 20 ? 1 : 0},
+                 position: {x: n.x * 3, y: n.y * 3}});
+}
+DATA.edges.forEach(([a, b], i) => elements.push({group: "edges", data: {id: "e" + i, source: a, target: b}}));
+
+const cy = cytoscape({
+  container: document.getElementById("cy"), elements, layout: {name: "preset"},
+  minZoom: 0.05, maxZoom: 6, wheelSensitivity: 0.25, pixelRatio: "auto", hideEdgesOnViewport: true, textureOnViewport: false,
+  style: [
+    {selector: "node", style: {"width": "data(size)", "height": "data(size)", "background-color": "data(color)",
+      "border-width": 0, "label": "", "color": "#e6ecf7", "font-size": 11, "text-outline-color": "#0b1220", "text-outline-width": 2,
+      "min-zoomed-font-size": 7}},
+    {selector: "node[type='group']", style: {"label": "data(label)", "font-weight": 600, "z-index": 10, "text-valign": "top", "text-margin-y": -3}},
+    {selector: "node[type='technique']", style: {"opacity": 0.85, "font-size": 9}},
+    {selector: "edge", style: {"width": 0.6, "line-color": "#3a4a6b", "opacity": 0.22, "curve-style": "haystack"}},
+    {selector: ".faded", style: {"opacity": 0.06, "label": ""}},
+    {selector: "edge.faded", style: {"opacity": 0.02}},
+    {selector: ".hl", style: {"opacity": 1}},
+    {selector: "node.hl[type='technique']", style: {"label": "data(label)"}},
+    {selector: "edge.hl", style: {"opacity": 0.55, "line-color": "#7fb6ff", "width": 1}},
+    {selector: "node.sel", style: {"border-width": 4, "border-color": "#ffffff", "label": "data(label)", "font-size": 14, "z-index": 99}},
+    {selector: "node.prioOn[prio=1]", style: {"border-width": 4, "border-color": "#f6ad55", "label": "data(label)", "z-index": 50}},
+    {selector: ".hidden", style: {"display": "none"}}
+  ]
+});
+
+function applyView() {
+  cy.batch(() => {
+    cy.elements().removeClass("faded hl sel");
+    const showG = document.getElementById("showG").checked, showT = document.getElementById("showT").checked;
+    cy.nodes("[type='group']").toggleClass("hidden", !showG);
+    cy.nodes("[type='technique']").toggleClass("hidden", !showT);
+    cy.nodes().toggleClass("prioOn", document.getElementById("prio").checked);
+    let focus = null;
+    if (selected) {
+      const n = cy.getElementById(selected);
+      focus = n.closedNeighborhood();
+      n.addClass("sel");
+    } else if (activeComm !== null) {
+      const gs = cy.nodes(`[type='group'][comm=${activeComm}]`);
+      focus = gs.union(gs.neighborhood());
+    }
+    if (focus) { cy.elements().not(focus).addClass("faded"); focus.addClass("hl"); }
+  });
+}
+
+function select(id, center = true) {
+  selected = id; applyView(); renderDetail();
+  if (id && center) { const n = cy.getElementById(id); cy.animate({fit: {eles: n.closedNeighborhood(), padding: 60}}, {duration: 450}); }
+}
+
+const fmt = (x, d = 4) => (x === null || x === undefined) ? "—" : Number(x).toFixed(d);
+function renderDetail() {
+  const el = document.getElementById("detail");
+  if (!selected) {
+    el.innerHTML = `<div class="card"><b>${T("mainQ")}</b><ol style="margin:8px 0 0 18px;padding:0"><li>${T("q1")}</li><li>${T("q2")}</li></ol></div>
+      <div class="card" style="color:var(--muted)">${T("empty")}</div><div class="card" style="color:var(--muted);font-size:12px">${T("prioInfo")}</div>`;
+    return;
+  }
+  const n = byId[selected], isG = n.type === "group";
+  const nbrs = cy.getElementById(selected).neighborhood("node").map(x => byId[x.id()]).sort((a, b) => b.deg - a.deg);
+  const tags = (s) => s ? s.split(";").filter(Boolean).map(x => `<span class="tag">${x}</span>`).join("") : "—";
+  let html = `<div class="card"><div style="color:var(--muted);font-size:12px">${isG ? T("group") : (n.sub ? T("subtech") : T("technique"))} · ${n.id}</div>
+    <h3>${n.name}</h3>${n.url ? `<a href="${n.url}" target="_blank" rel="noopener">${T("open")} ↗</a>` : ""}</div>
+    <div class="card"><div class="kv">
+      <span>${isG ? T("degreeG") : T("degreeT")}</span><b>${n.deg}</b>
+      <span>${T("btw")}</span><b>${fmt(n.btw)}</b>
+      <span>${T("pr")}</span><b>${fmt(n.pr)}</b>`;
+  if (isG) {
+    html += `<span>${T("community")}</span><b style="color:${COLORS[n.comm % COLORS.length]}">${commName(n.comm)}</b>
+             <span>${T("jc")}</span><b>${n.jc === null ? "—" : jcName(n.jc)}</b>`;
+  } else {
+    html += `<span>${T("greedy")}</span><b class="${n.greedy && n.greedy <= 20 ? "prio" : ""}">${n.greedy ? "#" + n.greedy : "—"}</b>
+             <span>${T("greedy3")}</span><b class="${n.greedy3 && n.greedy3 <= 20 ? "prio" : ""}">${n.greedy3 ? "#" + n.greedy3 : "—"}</b>`;
+  }
+  html += `</div></div>`;
+  if (isG && n.aliases) html += `<div class="card"><div style="color:var(--muted);font-size:12px;margin-bottom:4px">${T("aliases")}</div>${tags(n.aliases)}</div>`;
+  if (!isG) html += `<div class="card"><div style="color:var(--muted);font-size:12px;margin-bottom:4px">${T("tactics")}</div>${tags(n.tactics)}
+      <div style="color:var(--muted);font-size:12px;margin:8px 0 4px">${T("platforms")}</div>${tags(n.platforms)}</div>`;
+  if (n.desc) html += `<div class="card"><div style="color:var(--muted);font-size:12px;margin-bottom:4px">${T("desc")}</div><div style="font-size:13px">${n.desc}</div></div>`;
+  const shown = nbrs.slice(0, 60);
+  html += `<div class="card"><div style="color:var(--muted);font-size:12px;margin-bottom:6px">${isG ? T("neighborsG") : T("neighborsT")} (${nbrs.length})</div>` +
+    shown.map(m => `<div class="nb" data-id="${m.id}"><span>${m.type === "group" ? `<span class="dot" style="display:inline-block;margin:0 6px 0 0;background:${COLORS[m.comm % COLORS.length]}"></span>` : ""}${m.type === "group" ? m.name : m.id + " " + m.name}</span><small>${m.deg}</small></div>`).join("") +
+    (nbrs.length > shown.length ? `<div class="hint">+${nbrs.length - shown.length} ${T("more")}</div>` : "") + `</div>`;
+  el.innerHTML = html;
+  el.querySelectorAll(".nb").forEach(d => d.onclick = () => select(d.dataset.id));
+}
+
+function renderStatic() {
+  document.documentElement.lang = LANG;
+  document.querySelectorAll("[data-i18n]").forEach(e => e.textContent = T(e.dataset.i18n));
+  document.getElementById("q").placeholder = LANG === "tr" ? "APT29, PowerShell, T1105…" : "APT29, PowerShell, T1105…";
+  const nG = DATA.nodes.filter(n => n.type === "group").length, nT = DATA.nodes.length - nG;
+  document.getElementById("stats").innerHTML = `<b>${DATA.meta.nodes}</b> ${T("nodes")} · <b>${DATA.meta.edges}</b> ${T("edges")}<br><b>${nG}</b> ${T("groupsN")} · <b>${nT}</b> ${T("techniques").split(" ")[0].toLowerCase()}`;
+  const c = document.getElementById("comms");
+  c.innerHTML = `<div class="comm ${activeComm === null ? "on" : ""}" data-c="all"><span class="dot" style="background:#8b9bb8"></span><div>${T("all")}</div></div>` +
+    DATA.communities.map(o => `<div class="comm ${activeComm === o.id ? "on" : ""}" data-c="${o.id}"><span class="dot" style="background:${COLORS[o.id % COLORS.length]}"></span><div>${o[LANG]}<br><small>${o.size} ${T("groupsN")}</small></div></div>`).join("");
+  c.querySelectorAll(".comm").forEach(d => d.onclick = () => {
+    activeComm = d.dataset.c === "all" ? null : +d.dataset.c; selected = null; renderStatic(); applyView(); renderDetail();
+    const target = activeComm === null ? cy.elements() : cy.nodes(`[type='group'][comm=${activeComm}]`);
+    cy.animate({fit: {eles: target, padding: 50}}, {duration: 450});
+  });
+  document.getElementById("btn-tr").classList.toggle("on", LANG === "tr");
+  document.getElementById("btn-en").classList.toggle("on", LANG === "en");
+}
+
+document.getElementById("names").innerHTML = DATA.nodes.map(n => `<option value="${n.id} — ${n.name.replace(/"/g, "&quot;")}">`).join("");
+document.getElementById("q").addEventListener("change", e => {
+  const v = e.target.value.trim().toLowerCase(); if (!v) return;
+  const id = v.split(" — ")[0].toUpperCase();
+  const hit = byId[id] || DATA.nodes.find(n => n.name.toLowerCase() === v) || DATA.nodes.find(n => n.name.toLowerCase().includes(v) || n.id.toLowerCase() === v)
+          || DATA.nodes.find(n => (n.aliases || "").toLowerCase().includes(v));
+  if (hit) { activeComm = null; renderStatic(); select(hit.id); }
+});
+["showG", "showT", "prio"].forEach(id => document.getElementById(id).onchange = applyView);
+document.getElementById("reset").onclick = () => { activeComm = null; selected = null; document.getElementById("q").value = "";
+  ["showG", "showT"].forEach(i => document.getElementById(i).checked = true); document.getElementById("prio").checked = false;
+  renderStatic(); applyView(); renderDetail(); cy.fit(undefined, 30); };
+document.getElementById("btn-tr").onclick = () => { LANG = "tr"; renderStatic(); renderDetail(); };
+document.getElementById("btn-en").onclick = () => { LANG = "en"; renderStatic(); renderDetail(); };
+cy.on("tap", "node", e => select(e.target.id(), false));
+cy.on("tap", e => { if (e.target === cy) { selected = null; applyView(); renderDetail(); } });
+const params = new URLSearchParams(location.search);
+if (params.get("lang") === "en") LANG = "en";
+renderStatic(); applyView(); renderDetail(); cy.fit(undefined, 30);
+if (params.get("node") && byId[params.get("node")]) select(params.get("node"));
+</script>
+</body>
+</html>

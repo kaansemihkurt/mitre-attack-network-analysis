@@ -1,0 +1,10 @@
+# Python 3.10–3.13 ile test edildi. Kurulum:  pip install -r requirements.txt
+requests>=2.31
+numpy>=1.26
+pandas>=2.2
+scipy>=1.11
+networkx==3.7        # Louvain + Leiden (nx.community.leiden_communities) ve ForceAtlas2 yerleşimi; sürüm sabit = aynı sonuçlar
+scikit-learn>=1.4    # NMI, ARI, siluet
+powerlaw>=1.5        # derece dağılımı testi (Clauset–Shalizi–Newman)
+matplotlib>=3.8
+jupyter

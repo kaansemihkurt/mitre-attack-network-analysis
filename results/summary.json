@@ -1,0 +1,2624 @@
+{
+ "basic": {
+  "düğüm": 689,
+  "kenar": 4815,
+  "grup": 174,
+  "teknik": 515,
+  "yoğunluk (standart)": 0.02031508421372397,
+  "yoğunluk (iki parçalı, m/(nG·nT))": 0.05373284231670573,
+  "bileşen sayısı": 1,
+  "en büyük bileşen (düğüm)": 689,
+  "ort. en kısa yol (en büyük bileşen)": 3.1332399500455663,
+  "çap (en büyük bileşen)": 7,
+  "kümelenme (standart, üçgen)": 0,
+  "kümelenme (iki parçalı, Latapy)": 0.10757626381777548,
+  "derece benzeşimi (assortativity)": -0.28408563376893914,
+  "grup başına teknik: ortalama": 27.67241379310345,
+  "grup başına teknik: medyan": 19.0,
+  "teknik başına grup: ortalama": 9.349514563106796,
+  "teknik başına grup: medyan": 4.0,
+  "grup projeksiyonu: düğüm": 174,
+  "grup projeksiyonu: kenar": 11776,
+  "grup projeksiyonu: yoğunluk": 0.7824064846189622,
+  "grup projeksiyonu: kümelenme (transitivity)": 0.8933529831524996,
+  "grup projeksiyonu: ağırlıklı ort. kümelenme": 0.02426674233949372,
+  "grup projeksiyonu: ort. en kısa yol": 1.2182579230615906,
+  "grup projeksiyonu: çap": 3,
+  "grup projeksiyonu: bileşen sayısı": 1,
+  "teknik projeksiyonu: düğüm": 515,
+  "teknik projeksiyonu: kenar": 45864,
+  "teknik projeksiyonu: yoğunluk": 0.34652260964829434,
+  "teknik projeksiyonu: kümelenme (transitivity)": 0.6107321281543232,
+  "teknik projeksiyonu: ağırlıklı ort. kümelenme": 0.005733365934138644,
+  "teknik projeksiyonu: ort. en kısa yol": 1.65787465528314,
+  "teknik projeksiyonu: çap": 3,
+  "teknik projeksiyonu: bileşen sayısı": 1
+ },
+ "small_components": [],
+ "powerlaw": [
+  {
+   "taraf": "grup",
+   "alpha": 2.7843541429679393,
+   "xmin": 28.0,
+   "KS_D": 0.16157607490730153,
+   "kuyruktaki düğüm": 70,
+   "R(PL vs lognormal)": -2.2672860832311237,
+   "p(PL vs lognormal)": 0.023372755062341332,
+   "R(PL vs exponential)": -3.2121932645914195,
+   "p(PL vs exponential)": 0.001317257288049345
+  },
+  {
+   "taraf": "teknik",
+   "alpha": 1.7870534941401264,
+   "xmin": 3.0,
+   "KS_D": 0.09252107237481266,
+   "kuyruktaki düğüm": 319,
+   "R(PL vs lognormal)": -4.201194548288983,
+   "p(PL vs lognormal)": 2.655103004959073e-05,
+   "R(PL vs exponential)": 0.38823587749904265,
+   "p(PL vs exponential)": 0.697841484957112
+  }
+ ],
+ "top_techniques": {
+  "derece": [
+   [
+    "T1105",
+    "Ingress Tool Transfer",
+    90.0
+   ],
+   [
+    "T1204.002",
+    "Malicious File",
+    87.0
+   ],
+   [
+    "T1059.001",
+    "PowerShell",
+    86.0
+   ],
+   [
+    "T1588.002",
+    "Tool",
+    84.0
+   ],
+   [
+    "T1566.001",
+    "Spearphishing Attachment",
+    79.0
+   ],
+   [
+    "T1059.003",
+    "Windows Command Shell",
+    73.0
+   ],
+   [
+    "T1036.005",
+    "Match Legitimate Resource Name or Location",
+    66.0
+   ],
+   [
+    "T1082",
+    "System Information Discovery",
+    59.0
+   ],
+   [
+    "T1547.001",
+    "Registry Run Keys / Startup Folder",
+    59.0
+   ],
+   [
+    "T1071.001",
+    "Web Protocols",
+    58.0
+   ]
+  ],
+  "betweenness": [
+   [
+    "T1588.002",
+    "Tool",
+    0.04202288258900787
+   ],
+   [
+    "T1059.001",
+    "PowerShell",
+    0.03918703343554723
+   ],
+   [
+    "T1105",
+    "Ingress Tool Transfer",
+    0.03878239222861045
+   ],
+   [
+    "T1204.002",
+    "Malicious File",
+    0.030573515166965576
+   ],
+   [
+    "T1566.001",
+    "Spearphishing Attachment",
+    0.024087408591745702
+   ],
+   [
+    "T1059.003",
+    "Windows Command Shell",
+    0.0235074316993466
+   ],
+   [
+    "T1036.005",
+    "Match Legitimate Resource Name or Location",
+    0.0233398210416285
+   ],
+   [
+    "T1071.001",
+    "Web Protocols",
+    0.019648895283711103
+   ],
+   [
+    "T1082",
+    "System Information Discovery",
+    0.01890385918842895
+   ],
+   [
+    "T1078",
+    "Valid Accounts",
+    0.017172302228604937
+   ]
+  ],
+  "closeness": [
+   [
+    "T1588.002",
+    "Tool",
+    0.47579529737206083
+   ],
+   [
+    "T1059.001",
+    "PowerShell",
+    0.47513812154696133
+   ],
+   [
+    "T1105",
+    "Ingress Tool Transfer",
+    0.47448275862068967
+   ],
+   [
+    "T1036.005",
+    "Match Legitimate Resource Name or Location",
+    0.4461738002594034
+   ],
+   [
+    "T1059.003",
+    "Windows Command Shell",
+    0.44387096774193546
+   ],
+   [
+    "T1204.002",
+    "Malicious File",
+    0.44272844272844275
+   ],
+   [
+    "T1082",
+    "System Information Discovery",
+    0.44046094750320103
+   ],
+   [
+    "T1083",
+    "File and Directory Discovery",
+    0.4337957124842371
+   ],
+   [
+    "T1547.001",
+    "Registry Run Keys / Startup Folder",
+    0.4332493702770781
+   ],
+   [
+    "T1071.001",
+    "Web Protocols",
+    0.4316185696361355
+   ]
+  ],
+  "pagerank": [
+   [
+    "T1105",
+    "Ingress Tool Transfer",
+    0.0076532434700265686
+   ],
+   [
+    "T1204.002",
+    "Malicious File",
+    0.007582889054103814
+   ],
+   [
+    "T1588.002",
+    "Tool",
+    0.007393284168337713
+   ],
+   [
+    "T1059.001",
+    "PowerShell",
+    0.00735478114681235
+   ],
+   [
+    "T1566.001",
+    "Spearphishing Attachment",
+    0.0068812559467195025
+   ],
+   [
+    "T1059.003",
+    "Windows Command Shell",
+    0.006175042703451408
+   ],
+   [
+    "T1036.005",
+    "Match Legitimate Resource Name or Location",
+    0.005703032910226846
+   ],
+   [
+    "T1071.001",
+    "Web Protocols",
+    0.005095432134798639
+   ],
+   [
+    "T1082",
+    "System Information Discovery",
+    0.0050718861127289775
+   ],
+   [
+    "T1547.001",
+    "Registry Run Keys / Startup Folder",
+    0.005041477700206409
+   ]
+  ],
+  "eigenvector": [
+   [
+    "T1105",
+    "Ingress Tool Transfer",
+    0.15308816109007328
+   ],
+   [
+    "T1059.001",
+    "PowerShell",
+    0.14911519690031022
+   ],
+   [
+    "T1588.002",
+    "Tool",
+    0.13821754970224268
+   ],
+   [
+    "T1204.002",
+    "Malicious File",
+    0.1294355510227801
+   ],
+   [
+    "T1059.003",
+    "Windows Command Shell",
+    0.12918096751309677
+   ],
+   [
+    "T1566.001",
+    "Spearphishing Attachment",
+    0.11925407957434181
+   ],
+   [
+    "T1036.005",
+    "Match Legitimate Resource Name or Location",
+    0.11718393777056918
+   ],
+   [
+    "T1547.001",
+    "Registry Run Keys / Startup Folder",
+    0.1113831926193185
+   ],
+   [
+    "T1053.005",
+    "Scheduled Task",
+    0.10836423423280656
+   ],
+   [
+    "T1082",
+    "System Information Discovery",
+    0.10769457832518402
+   ]
+  ]
+ },
+ "top_groups": {
+  "derece": [
+   [
+    "G0094",
+    "Kimsuky",
+    130.0
+   ],
+   [
+    "G0082",
+    "APT38",
+    115.0
+   ],
+   [
+    "G0007",
+    "APT28",
+    93.0
+   ],
+   [
+    "G0032",
+    "Lazarus Group",
+    93.0
+   ],
+   [
+    "G0129",
+    "Mustang Panda",
+    85.0
+   ],
+   [
+    "G0096",
+    "APT41",
+    82.0
+   ],
+   [
+    "G1017",
+    "Volt Typhoon",
+    81.0
+   ],
+   [
+    "G0034",
+    "Sandworm Team",
+    79.0
+   ],
+   [
+    "G0050",
+    "APT32",
+    78.0
+   ],
+   [
+    "G0059",
+    "Magic Hound",
+    78.0
+   ]
+  ],
+  "betweenness": [
+   [
+    "G0094",
+    "Kimsuky",
+    0.0786989097481528
+   ],
+   [
+    "G0082",
+    "APT38",
+    0.07775996880635933
+   ],
+   [
+    "G0007",
+    "APT28",
+    0.05362140619643265
+   ],
+   [
+    "G0129",
+    "Mustang Panda",
+    0.040607784299975025
+   ],
+   [
+    "G0016",
+    "APT29",
+    0.04039397003403444
+   ],
+   [
+    "G0032",
+    "Lazarus Group",
+    0.03988099031580711
+   ],
+   [
+    "G1045",
+    "Salt Typhoon",
+    0.03743807978149362
+   ],
+   [
+    "G1017",
+    "Volt Typhoon",
+    0.036555240608078854
+   ],
+   [
+    "G1015",
+    "Scattered Spider",
+    0.03594233088183241
+   ],
+   [
+    "G0096",
+    "APT41",
+    0.03352741088936785
+   ]
+  ],
+  "closeness": [
+   [
+    "G0094",
+    "Kimsuky",
+    0.4182370820668693
+   ],
+   [
+    "G0082",
+    "APT38",
+    0.4097677188802859
+   ],
+   [
+    "G0032",
+    "Lazarus Group",
+    0.40069889341875364
+   ],
+   [
+    "G0007",
+    "APT28",
+    0.399767576990122
+   ],
+   [
+    "G0129",
+    "Mustang Panda",
+    0.3951751866743251
+   ],
+   [
+    "G0096",
+    "APT41",
+    0.3947217441193345
+   ],
+   [
+    "G0034",
+    "Sandworm Team",
+    0.39247005134055907
+   ],
+   [
+    "G0049",
+    "OilRig",
+    0.39247005134055907
+   ],
+   [
+    "G0050",
+    "APT32",
+    0.392022792022792
+   ],
+   [
+    "G0059",
+    "Magic Hound",
+    0.392022792022792
+   ]
+  ],
+  "pagerank": [
+   [
+    "G0094",
+    "Kimsuky",
+    0.01326289655789892
+   ],
+   [
+    "G0082",
+    "APT38",
+    0.012845762079138939
+   ],
+   [
+    "G0007",
+    "APT28",
+    0.010053320908370121
+   ],
+   [
+    "G0032",
+    "Lazarus Group",
+    0.008901408914891239
+   ],
+   [
+    "G0129",
+    "Mustang Panda",
+    0.008719546308563848
+   ],
+   [
+    "G1017",
+    "Volt Typhoon",
+    0.008219155587504292
+   ],
+   [
+    "G0096",
+    "APT41",
+    0.007730244219327969
+   ],
+   [
+    "G0016",
+    "APT29",
+    0.0077185943934183765
+   ],
+   [
+    "G1045",
+    "Salt Typhoon",
+    0.007568647290495784
+   ],
+   [
+    "G0034",
+    "Sandworm Team",
+    0.007541277123491937
+   ]
+  ],
+  "eigenvector": [
+   [
+    "G0094",
+    "Kimsuky",
+    0.1503248834764727
+   ],
+   [
+    "G0082",
+    "APT38",
+    0.1296827422412903
+   ],
+   [
+    "G0032",
+    "Lazarus Group",
+    0.12523362221941117
+   ],
+   [
+    "G0050",
+    "APT32",
+    0.12098446914298375
+   ],
+   [
+    "G0059",
+    "Magic Hound",
+    0.11750965888089727
+   ],
+   [
+    "G0129",
+    "Mustang Panda",
+    0.11704884720244026
+   ],
+   [
+    "G0049",
+    "OilRig",
+    0.11560915999193404
+   ],
+   [
+    "G0096",
+    "APT41",
+    0.11358882752800796
+   ],
+   [
+    "G0034",
+    "Sandworm Team",
+    0.11197413322463151
+   ],
+   [
+    "G0069",
+    "MuddyWater",
+    0.11039153481007305
+   ]
+  ]
+ },
+ "spearman_techniques": {
+  "derece": {
+   "derece": 1.0,
+   "betweenness": 0.976,
+   "closeness": 0.945,
+   "pagerank": 0.988,
+   "eigenvector": 0.966
+  },
+  "betweenness": {
+   "derece": 0.976,
+   "betweenness": 1.0,
+   "closeness": 0.943,
+   "pagerank": 0.98,
+   "eigenvector": 0.939
+  },
+  "closeness": {
+   "derece": 0.945,
+   "betweenness": 0.943,
+   "closeness": 1.0,
+   "pagerank": 0.923,
+   "eigenvector": 0.985
+  },
+  "pagerank": {
+   "derece": 0.988,
+   "betweenness": 0.98,
+   "closeness": 0.923,
+   "pagerank": 1.0,
+   "eigenvector": 0.934
+  },
+  "eigenvector": {
+   "derece": 0.966,
+   "betweenness": 0.939,
+   "closeness": 0.985,
+   "pagerank": 0.934,
+   "eigenvector": 1.0
+  }
+ },
+ "spearman_groups": {
+  "derece": {
+   "derece": 1.0,
+   "betweenness": 0.934,
+   "closeness": 0.973,
+   "pagerank": 0.992,
+   "eigenvector": 0.966
+  },
+  "betweenness": {
+   "derece": 0.934,
+   "betweenness": 1.0,
+   "closeness": 0.884,
+   "pagerank": 0.965,
+   "eigenvector": 0.856
+  },
+  "closeness": {
+   "derece": 0.973,
+   "betweenness": 0.884,
+   "closeness": 1.0,
+   "pagerank": 0.953,
+   "eigenvector": 0.98
+  },
+  "pagerank": {
+   "derece": 0.992,
+   "betweenness": 0.965,
+   "closeness": 0.953,
+   "pagerank": 1.0,
+   "eigenvector": 0.937
+  },
+  "eigenvector": {
+   "derece": 0.966,
+   "betweenness": 0.856,
+   "closeness": 0.98,
+   "pagerank": 0.937,
+   "eigenvector": 1.0
+  }
+ },
+ "spearman_all": {
+  "derece": {
+   "derece": 1.0,
+   "betweenness": 0.97,
+   "closeness": 0.959,
+   "pagerank": 0.992,
+   "eigenvector": 0.976
+  },
+  "betweenness": {
+   "derece": 0.97,
+   "betweenness": 1.0,
+   "closeness": 0.93,
+   "pagerank": 0.979,
+   "eigenvector": 0.936
+  },
+  "closeness": {
+   "derece": 0.959,
+   "betweenness": 0.93,
+   "closeness": 1.0,
+   "pagerank": 0.941,
+   "eigenvector": 0.982
+  },
+  "pagerank": {
+   "derece": 0.992,
+   "betweenness": 0.979,
+   "closeness": 0.941,
+   "pagerank": 1.0,
+   "eigenvector": 0.953
+  },
+  "eigenvector": {
+   "derece": 0.976,
+   "betweenness": 0.936,
+   "closeness": 0.982,
+   "pagerank": 0.953,
+   "eigenvector": 1.0
+  }
+ },
+ "bridge_techniques": [
+  [
+   "T1120",
+   "Peripheral Device Discovery",
+   9,
+   0.006743438224699573,
+   146,
+   31
+  ],
+  [
+   "T1585.001",
+   "Social Media Accounts",
+   23,
+   0.005542984790405364,
+   58,
+   40
+  ],
+  [
+   "T1583.006",
+   "Web Services",
+   29,
+   0.008209418258284914,
+   43,
+   25
+  ],
+  [
+   "T1133",
+   "External Remote Services",
+   28,
+   0.006602781928286237,
+   46,
+   33
+  ],
+  [
+   "T1587.001",
+   "Malware",
+   27,
+   0.006027734610609497,
+   49,
+   37
+  ]
+ ],
+ "communities_group": {
+  "Louvain": {
+   "modularity_mean": 0.09174014191125293,
+   "modularity_sd": 0.000899824235354065,
+   "modularity_best": 0.09238733344927162,
+   "n_comm_best": 4,
+   "sizes_best": [
+    75,
+    56,
+    28,
+    15
+   ],
+   "n_comm_range": [
+    3,
+    4
+   ],
+   "NMI_mean": 0.7127260263567564,
+   "NMI_min": 0.5253340041866186,
+   "ARI_mean": 0.7620672868225682,
+   "ARI_min": 0.5723922436581884
+  },
+  "Leiden": {
+   "modularity_mean": 0.09122860406451601,
+   "modularity_sd": 0.0012129278421780536,
+   "modularity_best": 0.09238733344927162,
+   "n_comm_best": 4,
+   "sizes_best": [
+    75,
+    56,
+    28,
+    15
+   ],
+   "n_comm_range": [
+    3,
+    4
+   ],
+   "NMI_mean": 0.6870518893140557,
+   "NMI_min": 0.5239910371055425,
+   "ARI_mean": 0.7364109921658106,
+   "ARI_min": 0.5692861403094837
+  },
+  "Louvain_vs_Leiden": {
+   "NMI": 1.0,
+   "ARI": 1.0
+  }
+ },
+ "communities_technique": {
+  "Louvain": {
+   "modularity_mean": 0.10863365526197613,
+   "modularity_sd": 0.0008203492181631431,
+   "modularity_best": 0.10981433362917228,
+   "n_comm_best": 5,
+   "sizes_best": [
+    166,
+    135,
+    125,
+    83,
+    6
+   ],
+   "n_comm_range": [
+    4,
+    5
+   ],
+   "NMI_mean": 0.7261032195828713,
+   "NMI_min": 0.5635881978707022,
+   "ARI_mean": 0.7401013683201384,
+   "ARI_min": 0.4871870063544021
+  },
+  "Leiden": {
+   "modularity_mean": 0.10864293652977874,
+   "modularity_sd": 0.0009071218894890572,
+   "modularity_best": 0.1098027958255656,
+   "n_comm_best": 5,
+   "sizes_best": [
+    182,
+    131,
+    114,
+    77,
+    11
+   ],
+   "n_comm_range": [
+    4,
+    5
+   ],
+   "NMI_mean": 0.7250317451167692,
+   "NMI_min": 0.615423238818238,
+   "ARI_mean": 0.7570536459498411,
+   "ARI_min": 0.6281924751514139
+  },
+  "Louvain_vs_Leiden": {
+   "NMI": 0.8537120696494542,
+   "ARI": 0.8709309391141847
+  }
+ },
+ "community_info": [
+  {
+   "id": 0,
+   "size": 75,
+   "top_members": [
+    "G0050 APT32",
+    "G0047 Gamaredon Group",
+    "G0069 MuddyWater",
+    "G0046 FIN7",
+    "G0065 Leviathan",
+    "G1006 Earth Lusca",
+    "G0040 Patchwork",
+    "G1039 RedCurl",
+    "G0060 BRONZE BUTLER",
+    "G0081 Tropic Trooper"
+   ],
+   "distinctive": [
+    [
+     "T1189 Drive-by Compromise",
+     1.65,
+     0.29
+    ],
+    [
+     "T1059.005 Visual Basic",
+     1.61,
+     0.43
+    ],
+    [
+     "T1566.001 Spearphishing Attachment",
+     1.59,
+     0.72
+    ],
+    [
+     "T1204.002 Malicious File",
+     1.55,
+     0.77
+    ],
+    [
+     "T1204.001 Malicious Link",
+     1.48,
+     0.43
+    ],
+    [
+     "T1027.013 Encrypted/Encoded File",
+     1.39,
+     0.32
+    ],
+    [
+     "T1566.002 Spearphishing Link",
+     1.35,
+     0.37
+    ],
+    [
+     "T1203 Exploitation for Client Execution",
+     1.33,
+     0.32
+    ]
+   ],
+   "most_common": [
+    [
+     "T1204.002 Malicious File",
+     0.77
+    ],
+    [
+     "T1566.001 Spearphishing Attachment",
+     0.72
+    ],
+    [
+     "T1105 Ingress Tool Transfer",
+     0.56
+    ],
+    [
+     "T1059.005 Visual Basic",
+     0.43
+    ],
+    [
+     "T1204.001 Malicious Link",
+     0.43
+    ]
+   ],
+   "keywords": {
+    "Çin": 24,
+    "Rusya": 13,
+    "İran": 7,
+    "K. Kore": 3,
+    "Finansal": 16,
+    "Vietnam": 4,
+    "Pakistan/Hindistan": 10,
+    "Orta Doğu": 11
+   },
+   "median_techniques": 14.0,
+   "name_tr": "Oltalama ve zararlı belgeyle sızanlar",
+   "name_en": "Phishing & malicious-document operators"
+  },
+  {
+   "id": 1,
+   "size": 56,
+   "top_members": [
+    "G0096 APT41",
+    "G1017 Volt Typhoon",
+    "G0059 Magic Hound",
+    "G0049 OilRig",
+    "G0010 Turla",
+    "G0102 Wizard Spider",
+    "G0114 Chimera",
+    "G0027 Threat Group-3390",
+    "G1051 Medusa Group",
+    "G0035 Dragonfly"
+   ],
+   "distinctive": [
+    [
+     "T1087.001 Local Account",
+     2.45,
+     0.27
+    ],
+    [
+     "T1021.002 SMB/Windows Admin Shares",
+     2.44,
+     0.39
+    ],
+    [
+     "T1078.002 Domain Accounts",
+     2.37,
+     0.29
+    ],
+    [
+     "T1570 Lateral Tool Transfer",
+     2.29,
+     0.25
+    ],
+    [
+     "T1018 Remote System Discovery",
+     2.1,
+     0.52
+    ],
+    [
+     "T1046 Network Service Discovery",
+     2.07,
+     0.39
+    ],
+    [
+     "T1021.001 Remote Desktop Protocol",
+     1.99,
+     0.45
+    ],
+    [
+     "T1087.002 Domain Account",
+     1.97,
+     0.34
+    ]
+   ],
+   "most_common": [
+    [
+     "T1059.003 Windows Command Shell",
+     0.64
+    ],
+    [
+     "T1059.001 PowerShell",
+     0.62
+    ],
+    [
+     "T1588.002 Tool",
+     0.62
+    ],
+    [
+     "T1105 Ingress Tool Transfer",
+     0.52
+    ],
+    [
+     "T1018 Remote System Discovery",
+     0.52
+    ]
+   ],
+   "keywords": {
+    "Çin": 20,
+    "Rusya": 8,
+    "İran": 9,
+    "K. Kore": 0,
+    "Finansal": 22,
+    "Vietnam": 1,
+    "Pakistan/Hindistan": 1,
+    "Orta Doğu": 8
+   },
+   "median_techniques": 25.0,
+   "name_tr": "Ağ içi keşif ve yanal hareket ustaları",
+   "name_en": "Network discovery & lateral-movement crews"
+  },
+  {
+   "id": 2,
+   "size": 28,
+   "top_members": [
+    "G0082 APT38",
+    "G0007 APT28",
+    "G0016 APT29",
+    "G1059 NIMBUS MANTICORE",
+    "G1015 Scattered Spider",
+    "G1055 VOID MANTICORE",
+    "G1045 Salt Typhoon",
+    "G0139 TeamTNT",
+    "G1052 Contagious Interview",
+    "G1048 UNC3886"
+   ],
+   "distinctive": [
+    [
+     "T1078.004 Cloud Accounts",
+     4.88,
+     0.39
+    ],
+    [
+     "T1059.004 Unix Shell",
+     4.78,
+     0.36
+    ],
+    [
+     "T1199 Trusted Relationship",
+     4.44,
+     0.36
+    ],
+    [
+     "T1657 Financial Theft",
+     3.92,
+     0.43
+    ],
+    [
+     "T1583.003 Virtual Private Server",
+     3.27,
+     0.36
+    ],
+    [
+     "T1684.001 Impersonation",
+     2.76,
+     0.29
+    ],
+    [
+     "T1486 Data Encrypted for Impact",
+     2.49,
+     0.29
+    ],
+    [
+     "T1585.001 Social Media Accounts",
+     2.43,
+     0.32
+    ]
+   ],
+   "most_common": [
+    [
+     "T1190 Exploit Public-Facing Application",
+     0.5
+    ],
+    [
+     "T1078 Valid Accounts",
+     0.5
+    ],
+    [
+     "T1105 Ingress Tool Transfer",
+     0.46
+    ],
+    [
+     "T1588.002 Tool",
+     0.46
+    ],
+    [
+     "T1036.005 Match Legitimate Resource Name or Location",
+     0.43
+    ]
+   ],
+   "keywords": {
+    "Çin": 7,
+    "Rusya": 3,
+    "İran": 3,
+    "K. Kore": 3,
+    "Finansal": 12,
+    "Vietnam": 0,
+    "Pakistan/Hindistan": 0,
+    "Orta Doğu": 2
+   },
+   "median_techniques": 39.5,
+   "name_tr": "Bulut, Linux ve güvenilen ilişki saldırganları",
+   "name_en": "Cloud, Linux & trusted-relationship intruders"
+  },
+  {
+   "id": 3,
+   "size": 15,
+   "top_members": [
+    "G0094 Kimsuky",
+    "G0032 Lazarus Group",
+    "G0129 Mustang Panda",
+    "G0034 Sandworm Team",
+    "G1001 HEXANE",
+    "G1044 APT42",
+    "G1036 Moonstone Sleet",
+    "G1033 Star Blizzard",
+    "G1011 EXOTIC LILY",
+    "G0122 Silent Librarian"
+   ],
+   "distinctive": [
+    [
+     "T1594 Search Victim-Owned Websites",
+     9.67,
+     0.33
+    ],
+    [
+     "T1589.002 Email Addresses",
+     5.8,
+     0.47
+    ],
+    [
+     "T1539 Steal Web Session Cookie",
+     5.8,
+     0.27
+    ],
+    [
+     "T1585.002 Email Accounts",
+     5.52,
+     0.67
+    ],
+    [
+     "T1598.003 Spearphishing Link",
+     4.35,
+     0.4
+    ],
+    [
+     "T1586.002 Email Accounts",
+     4.14,
+     0.33
+    ],
+    [
+     "T1585.001 Social Media Accounts",
+     3.53,
+     0.47
+    ],
+    [
+     "T1608.001 Upload Malware",
+     3.09,
+     0.53
+    ]
+   ],
+   "most_common": [
+    [
+     "T1583.001 Domains",
+     0.67
+    ],
+    [
+     "T1585.002 Email Accounts",
+     0.67
+    ],
+    [
+     "T1588.002 Tool",
+     0.6
+    ],
+    [
+     "T1204.002 Malicious File",
+     0.53
+    ],
+    [
+     "T1608.001 Upload Malware",
+     0.53
+    ]
+   ],
+   "keywords": {
+    "Çin": 2,
+    "Rusya": 4,
+    "İran": 2,
+    "K. Kore": 3,
+    "Finansal": 3,
+    "Vietnam": 1,
+    "Pakistan/Hindistan": 1,
+    "Orta Doğu": 3
+   },
+   "median_techniques": 20.0,
+   "name_tr": "Sosyal mühendislik ve kimlik bilgisi avcıları",
+   "name_en": "Social-engineering & credential harvesters"
+  }
+ ],
+ "null_model": [
+  {
+   "ölçü": "kümelenme (transitivity)",
+   "gerçek": 0.8933529831524996,
+   "null ort.": 0.8952518715852225,
+   "null std": 0.0037244420767509894,
+   "z-skoru": -0.5098450703734376,
+   "p (tek yönlü, ampirik)": 0.33663366336633666
+  },
+  {
+   "ölçü": "ağırlıklı ort. kümelenme",
+   "gerçek": 0.02426674233949372,
+   "null ort.": 0.03340164480626418,
+   "null std": 0.004413812220891972,
+   "z-skoru": -2.0696173760025576,
+   "p (tek yönlü, ampirik)": 0.0297029702970297
+  },
+  {
+   "ölçü": "ort. en kısa yol",
+   "gerçek": 1.2182579230615906,
+   "null ort.": 1.1799429381961795,
+   "null std": 0.008952863070738112,
+   "z-skoru": 4.2796348567690465,
+   "p (tek yönlü, ampirik)": 0.009900990099009901
+  },
+  {
+   "ölçü": "yoğunluk",
+   "gerçek": 0.7824064846189622,
+   "null ort.": 0.819594711314863,
+   "null std": 0.009110320464092313,
+   "z-skoru": -4.081988865537221,
+   "p (tek yönlü, ampirik)": 0.009900990099009901
+  },
+  {
+   "ölçü": "modülerlik (Louvain)",
+   "gerçek": 0.09233035758493192,
+   "null ort.": 0.043131759165906225,
+   "null std": 0.0016559109454681667,
+   "z-skoru": 29.71089632185265,
+   "p (tek yönlü, ampirik)": 0.009900990099009901
+  }
+ ],
+ "newman": {
+  "spearman_newman_vs_shared": 0.918174317847499,
+  "top_newman": [
+   [
+    "LAPSUS$",
+    "Scattered Spider",
+    5.650326,
+    21
+   ],
+   [
+    "Kimsuky",
+    "Mustang Panda",
+    5.098433,
+    48
+   ],
+   [
+    "APT38",
+    "Kimsuky",
+    4.667036,
+    60
+   ],
+   [
+    "Scattered Spider",
+    "Storm-0501",
+    4.557365,
+    17
+   ],
+   [
+    "APT38",
+    "Contagious Interview",
+    3.808846,
+    31
+   ],
+   [
+    "APT38",
+    "TeamPCP",
+    3.599993,
+    21
+   ],
+   [
+    "Gamaredon Group",
+    "Kimsuky",
+    3.102558,
+    45
+   ],
+   [
+    "APT28",
+    "Kimsuky",
+    2.946596,
+    40
+   ],
+   [
+    "Lazarus Group",
+    "Mustang Panda",
+    2.851779,
+    41
+   ],
+   [
+    "APT38",
+    "NIMBUS MANTICORE",
+    2.843122,
+    29
+   ]
+  ],
+  "top_shared": [
+   [
+    "APT38",
+    "Kimsuky",
+    60,
+    4.667036
+   ],
+   [
+    "Lazarus Group",
+    "Kimsuky",
+    49,
+    2.841167
+   ],
+   [
+    "Kimsuky",
+    "Mustang Panda",
+    48,
+    5.098433
+   ],
+   [
+    "Lazarus Group",
+    "APT38",
+    45,
+    2.567706
+   ],
+   [
+    "Gamaredon Group",
+    "Kimsuky",
+    45,
+    3.102558
+   ],
+   [
+    "APT32",
+    "Kimsuky",
+    45,
+    1.964975
+   ],
+   [
+    "Magic Hound",
+    "Kimsuky",
+    45,
+    1.792889
+   ],
+   [
+    "APT32",
+    "APT38",
+    44,
+    2.170011
+   ],
+   [
+    "MuddyWater",
+    "Kimsuky",
+    44,
+    2.399646
+   ],
+   [
+    "Sandworm Team",
+    "Kimsuky",
+    43,
+    2.524467
+   ]
+  ],
+  "overlap_top10": 3
+ },
+ "toy": {
+  "A-B": 1.5,
+  "A-C": 0.5,
+  "B-C": 1.5
+ },
+ "jaccard": {
+  "n_groups": 155,
+  "excluded": 19,
+  "k_nn": 5,
+  "hier_best_k": 3,
+  "hier_silhouette": 0.05222844441054728,
+  "hier_sizes": [
+   152,
+   2,
+   1
+  ],
+  "knn_edges": 602,
+  "n_clusters": 5,
+  "sizes": [
+   49,
+   34,
+   25,
+   24,
+   23
+  ],
+  "modularity": 0.5288760961164887,
+  "silhouette": 0.023152141425597062,
+  "seed_NMI_mean": 0.7946280237853623,
+  "mean_jaccard": 0.09501801748873254,
+  "agreement_with_leiden": {
+   "NMI": 0.2867421574359661,
+   "ARI": 0.2180393111775127
+  },
+  "clusters": [
+   {
+    "id": 0,
+    "size": 49,
+    "members": [
+     "G0007 APT28",
+     "G0096 APT41",
+     "G1017 Volt Typhoon",
+     "G0016 APT29",
+     "G0102 Wizard Spider",
+     "G0114 Chimera",
+     "G1045 Salt Typhoon",
+     "G0027 Threat Group-3390",
+     "G1051 Medusa Group",
+     "G0035 Dragonfly",
+     "G0139 TeamTNT",
+     "G0087 APT39",
+     "G1016 FIN13",
+     "G0065 Leviathan",
+     "G1048 UNC3886",
+     "G1043 BlackByte",
+     "G1003 Ember Bear",
+     "G0004 Ke3chang",
+     "G0045 menuPass",
+     "G0022 APT3",
+     "G0125 HAFNIUM",
+     "G1054 MirrorFace",
+     "G0117 Fox Kitten",
+     "G0037 FIN6",
+     "G0061 FIN8",
+     "G0106 Rocke",
+     "G0143 Aquatic Panda",
+     "G0080 Cobalt Group",
+     "G0119 Indrik Spider",
+     "G0093 GALLIUM",
+     "G1046 Storm-1811",
+     "G1023 APT5",
+     "G0091 Silence",
+     "G1041 Sea Turtle",
+     "G1040 Play",
+     "G1022 ToddyCat",
+     "G1032 INC Ransom",
+     "G0006 APT1",
+     "G0108 Blue Mockingbird",
+     "G1030 Agrius",
+     "G1047 Velvet Ant",
+     "G0030 Lotus Blossom",
+     "G1021 Cinnamon Tempest",
+     "G1024 Akira",
+     "G1058 The Gentlemen",
+     "G0001 Axiom",
+     "G0051 FIN10",
+     "G0053 FIN5",
+     "G0009 Deep Panda"
+    ],
+    "distinctive": [
+     [
+      "T1021.001 Remote Desktop Protocol",
+      2.64,
+      0.59
+     ],
+     [
+      "T1018 Remote System Discovery",
+      2.56,
+      0.63
+     ],
+     [
+      "T1021.002 SMB/Windows Admin Shares",
+      2.54,
+      0.41
+     ],
+     [
+      "T1074.001 Local Data Staging",
+      2.45,
+      0.41
+     ],
+     [
+      "T1133 External Remote Services",
+      2.41,
+      0.39
+     ]
+    ],
+    "keywords": {
+     "Çin": 20,
+     "Rusya": 9,
+     "İran": 3,
+     "K. Kore": 0,
+     "Finansal": 22,
+     "Vietnam": 1,
+     "Pakistan/Hindistan": 0,
+     "Orta Doğu": 3
+    },
+    "name_tr": "Ağ içinde el ile ilerleyenler (casusluk + fidye)",
+    "name_en": "Hands-on-keyboard intruders (espionage + ransomware)"
+   },
+   {
+    "id": 1,
+    "size": 34,
+    "members": [
+     "G0099 APT-C-36",
+     "G0092 TA505",
+     "G1036 Moonstone Sleet",
+     "G1014 LuminousMoth",
+     "G1018 TA2541",
+     "G0090 WIRTE",
+     "G0140 LazyScripter",
+     "G1033 Star Blizzard",
+     "G0112 Windshift",
+     "G0142 Confucius",
+     "G1012 CURIUM",
+     "G1031 Saint Bear",
+     "G0021 Molerats",
+     "G1002 BITTER",
+     "G1008 SideCopy",
+     "G1011 EXOTIC LILY",
+     "G0019 Naikon",
+     "G0098 BlackTech",
+     "G0127 TA551",
+     "G0134 Transparent Tribe",
+     "G0122 Silent Librarian",
+     "G0085 FIN4",
+     "G1020 Mustard Tempest",
+     "G1026 Malteiro",
+     "G0056 PROMETHIUM",
+     "G0095 Machete",
+     "G0120 Evilnum",
+     "G0066 Elderwood",
+     "G0075 Rancor",
+     "G1013 Metador",
+     "G0048 RTM",
+     "G0103 Mofang",
+     "G1037 TA577",
+     "G1042 RedEcho"
+    ],
+    "distinctive": [
+     [
+      "T1608.001 Upload Malware",
+      2.22,
+      0.38
+     ],
+     [
+      "T1204.001 Malicious Link",
+      2.05,
+      0.59
+     ],
+     [
+      "T1566.002 Spearphishing Link",
+      2.03,
+      0.56
+     ],
+     [
+      "T1566.001 Spearphishing Attachment",
+      1.68,
+      0.76
+     ],
+     [
+      "T1204.002 Malicious File",
+      1.59,
+      0.79
+     ]
+    ],
+    "keywords": {
+     "Çin": 7,
+     "Rusya": 4,
+     "İran": 2,
+     "K. Kore": 1,
+     "Finansal": 13,
+     "Vietnam": 0,
+     "Pakistan/Hindistan": 4,
+     "Orta Doğu": 5
+    },
+    "name_tr": "Bağlantılı oltalama kampanyaları",
+    "name_en": "Link-based phishing campaigns"
+   },
+   {
+    "id": 2,
+    "size": 25,
+    "members": [
+     "G0078 Gorgon Group",
+     "G0131 Tonto Team",
+     "G0135 BackdoorDiplomacy",
+     "G0138 Andariel",
+     "G1009 Moses Staff",
+     "G0068 PLATINUM",
+     "G0105 DarkVishnya",
+     "G0008 Carbanak",
+     "G0107 Whitefly",
+     "G0115 GOLD SOUTHFIELD",
+     "G1007 Aoqin Dragon",
+     "G0052 CopyKittens",
+     "G1019 MoustachedBouncer",
+     "G0079 DarkHydrus",
+     "G0089 The White Company",
+     "G0133 Nomadic Octopus",
+     "G0136 IndigoZebra",
+     "G1005 POLONIUM",
+     "G0084 Gallmaker",
+     "G0130 Ajax Security Team",
+     "G0137 Ferocious Kitten",
+     "G0003 Cleaver",
+     "G0005 APT12",
+     "G0062 TA459",
+     "G0123 Volatile Cedar"
+    ],
+    "distinctive": [
+     [
+      "T1204.002 Malicious File",
+      1.2,
+      0.6
+     ],
+     [
+      "T1566.001 Spearphishing Attachment",
+      1.15,
+      0.52
+     ],
+     [
+      "T1588.002 Tool",
+      1.08,
+      0.52
+     ],
+     [
+      "T1105 Ingress Tool Transfer",
+      0.85,
+      0.44
+     ],
+     [
+      "T1059.001 PowerShell",
+      0.81,
+      0.4
+     ]
+    ],
+    "keywords": {
+     "Çin": 5,
+     "Rusya": 3,
+     "İran": 6,
+     "K. Kore": 1,
+     "Finansal": 5,
+     "Vietnam": 1,
+     "Pakistan/Hindistan": 3,
+     "Orta Doğu": 6
+    },
+    "name_tr": "Zararlı ek ve hazır araç kullananlar",
+    "name_en": "Malicious-attachment & off-the-shelf tool users"
+   },
+   {
+    "id": 3,
+    "size": 24,
+    "members": [
+     "G0040 Patchwork",
+     "G1039 RedCurl",
+     "G0060 BRONZE BUTLER",
+     "G0081 Tropic Trooper",
+     "G0064 APT33",
+     "G0121 Sidewinder",
+     "G0067 APT37",
+     "G0128 ZIRCONIUM",
+     "G0126 Higaisa",
+     "G1035 Winter Vivern",
+     "G0012 Darkhotel",
+     "G0100 Inception",
+     "G0073 APT19",
+     "G0077 Leafminer",
+     "G1034 Daggerfly",
+     "G0038 Stealth Falcon",
+     "G0018 admin@338",
+     "G0026 APT18",
+     "G0070 Dark Caracal",
+     "G0054 Sowbug",
+     "G0033 Poseidon Group",
+     "G0124 Windigo",
+     "G0044 Winnti Group",
+     "G0039 Suckfly"
+    ],
+    "distinctive": [
+     [
+      "T1573.001 Symmetric Cryptography",
+      4.14,
+      0.33
+     ],
+     [
+      "T1555.003 Credentials from Web Browsers",
+      2.42,
+      0.33
+     ],
+     [
+      "T1189 Drive-by Compromise",
+      2.34,
+      0.42
+     ],
+     [
+      "T1083 File and Directory Discovery",
+      2.09,
+      0.62
+     ],
+     [
+      "T1082 System Information Discovery",
+      2.09,
+      0.71
+     ]
+    ],
+    "keywords": {
+     "Çin": 11,
+     "Rusya": 5,
+     "İran": 2,
+     "K. Kore": 2,
+     "Finansal": 1,
+     "Vietnam": 1,
+     "Pakistan/Hindistan": 4,
+     "Orta Doğu": 3
+    },
+    "name_tr": "Drive-by ve şifreli C2 kullanan casusluk grupları",
+    "name_en": "Drive-by & encrypted-C2 espionage toolkits"
+   },
+   {
+    "id": 4,
+    "size": 23,
+    "members": [
+     "G0094 Kimsuky",
+     "G0082 APT38",
+     "G0032 Lazarus Group",
+     "G0129 Mustang Panda",
+     "G0034 Sandworm Team",
+     "G0050 APT32",
+     "G0059 Magic Hound",
+     "G0049 OilRig",
+     "G0047 Gamaredon Group",
+     "G0010 Turla",
+     "G0069 MuddyWater",
+     "G0046 FIN7",
+     "G1059 NIMBUS MANTICORE",
+     "G1015 Scattered Spider",
+     "G1055 VOID MANTICORE",
+     "G1052 Contagious Interview",
+     "G1057 ShinyHunters",
+     "G1006 Earth Lusca",
+     "G1004 LAPSUS$",
+     "G1053 Storm-0501",
+     "G1056 TeamPCP",
+     "G1001 HEXANE",
+     "G1044 APT42"
+    ],
+    "distinctive": [
+     [
+      "T1485 Data Destruction",
+      7.57,
+      0.35
+     ],
+     [
+      "T1589 Gather Victim Identity Information",
+      5.3,
+      0.3
+     ],
+     [
+      "T1219.002 Remote Desktop Software",
+      4.41,
+      0.3
+     ],
+     [
+      "T1078.004 Cloud Accounts",
+      4.32,
+      0.35
+     ],
+     [
+      "T1102.002 Bidirectional Communication",
+      4.26,
+      0.39
+     ]
+    ],
+    "keywords": {
+     "Çin": 2,
+     "Rusya": 5,
+     "İran": 6,
+     "K. Kore": 4,
+     "Finansal": 10,
+     "Vietnam": 3,
+     "Pakistan/Hindistan": 1,
+     "Orta Doğu": 6
+    },
+    "name_tr": "Geniş repertuvarlı, en çok belgelenen gruplar",
+    "name_en": "Broad-repertoire, most-documented groups"
+   }
+  ],
+  "top_pairs": [
+   [
+    "Elderwood",
+    "Mofang",
+    0.5,
+    5
+   ],
+   [
+    "IndigoZebra",
+    "Ferocious Kitten",
+    0.4444444444444444,
+    4
+   ],
+   [
+    "Elderwood",
+    "Transparent Tribe",
+    0.4375,
+    7
+   ],
+   [
+    "APT12",
+    "TA459",
+    0.42857142857142855,
+    3
+   ],
+   [
+    "Rancor",
+    "Machete",
+    0.42857142857142855,
+    6
+   ],
+   [
+    "DarkHydrus",
+    "Nomadic Octopus",
+    0.4,
+    4
+   ],
+   [
+    "Patchwork",
+    "Sidewinder",
+    0.39215686274509803,
+    20
+   ],
+   [
+    "Machete",
+    "Transparent Tribe",
+    0.3888888888888889,
+    7
+   ],
+   [
+    "TA459",
+    "Gallmaker",
+    0.375,
+    3
+   ],
+   [
+    "APT-C-36",
+    "TA2541",
+    0.375,
+    18
+   ]
+  ],
+  "top_pairs_min15": [
+   [
+    "Patchwork",
+    "Sidewinder",
+    0.39215686274509803,
+    20
+   ],
+   [
+    "APT-C-36",
+    "TA2541",
+    0.375,
+    18
+   ],
+   [
+    "Threat Group-3390",
+    "menuPass",
+    0.37333333333333335,
+    28
+   ],
+   [
+    "MuddyWater",
+    "Earth Lusca",
+    0.3493975903614458,
+    29
+   ],
+   [
+    "Tropic Trooper",
+    "Sidewinder",
+    0.34615384615384615,
+    18
+   ],
+   [
+    "APT41",
+    "Wizard Spider",
+    0.3394495412844037,
+    37
+   ],
+   [
+    "APT32",
+    "Magic Hound",
+    0.3333333333333333,
+    39
+   ],
+   [
+    "FIN8",
+    "Wizard Spider",
+    0.3333333333333333,
+    25
+   ],
+   [
+    "WIRTE",
+    "TA505",
+    0.3333333333333333,
+    15
+   ],
+   [
+    "Rocke",
+    "TeamTNT",
+    0.3333333333333333,
+    23
+   ]
+  ]
+ },
+ "coverage": {
+  "summary": {
+   "k=1": {
+    "%50 için (greedy)": 1.0,
+    "%50 için (popülerlik)": 1.0,
+    "%80 için (greedy)": 4.0,
+    "%80 için (popülerlik)": 4.0,
+    "%90 için (greedy)": 6.0,
+    "%90 için (popülerlik)": 8.0,
+    "%100 için (greedy)": 17.0,
+    "%100 için (popülerlik)": 203.0,
+    "10 teknikle kapsanan %": 95.4022988506,
+    "20 teknikle kapsanan %": 100.0
+   },
+   "k=2": {
+    "%50 için (greedy)": 4.0,
+    "%50 için (popülerlik)": 4.0,
+    "%80 için (greedy)": 8.0,
+    "%80 için (popülerlik)": 12.0,
+    "%90 için (greedy)": 13.0,
+    "%90 için (popülerlik)": 23.0,
+    "%100 için (greedy)": 32.0,
+    "%100 için (popülerlik)": 350.0,
+    "10 teknikle kapsanan %": 86.2068965517,
+    "20 teknikle kapsanan %": 93.6781609195
+   },
+   "k=3": {
+    "%50 için (greedy)": 6.0,
+    "%50 için (popülerlik)": 6.0,
+    "%80 için (greedy)": 16.0,
+    "%80 için (popülerlik)": 18.0,
+    "%90 için (greedy)": 29.0,
+    "%90 için (popülerlik)": 45.0,
+    "%100 için (greedy)": 49.0,
+    "%100 için (popülerlik)": 370.0,
+    "10 teknikle kapsanan %": 71.2643678161,
+    "20 teknikle kapsanan %": 85.632183908
+   }
+  },
+  "pick_k1": [
+   [
+    1,
+    "T1105 Ingress Tool Transfer",
+    "command-and-control",
+    90,
+    90,
+    51.7
+   ],
+   [
+    2,
+    "T1204.002 Malicious File",
+    "execution",
+    87,
+    31,
+    69.5
+   ],
+   [
+    3,
+    "T1588.002 Tool",
+    "resource-development",
+    84,
+    18,
+    79.9
+   ],
+   [
+    4,
+    "T1059.001 PowerShell",
+    "execution",
+    86,
+    11,
+    86.2
+   ],
+   [
+    5,
+    "T1059.003 Windows Command Shell",
+    "execution",
+    73,
+    5,
+    89.1
+   ],
+   [
+    6,
+    "T1071.001 Web Protocols",
+    "command-and-control",
+    58,
+    3,
+    90.8
+   ],
+   [
+    7,
+    "T1083 File and Directory Discovery",
+    "discovery",
+    52,
+    2,
+    92.0
+   ],
+   [
+    8,
+    "T1027.013 Encrypted/Encoded File",
+    "stealth",
+    40,
+    2,
+    93.1
+   ],
+   [
+    9,
+    "T1583.006 Web Services",
+    "resource-development",
+    29,
+    2,
+    94.3
+   ],
+   [
+    10,
+    "T1657 Financial Theft",
+    "impact",
+    19,
+    2,
+    95.4
+   ],
+   [
+    11,
+    "T1564.005 Hidden File System",
+    "stealth",
+    2,
+    2,
+    96.6
+   ],
+   [
+    12,
+    "T1078 Valid Accounts",
+    "stealth, persistence, privilege-escalation, initial-access",
+    49,
+    1,
+    97.1
+   ],
+   [
+    13,
+    "T1021.004 SSH",
+    "lateral-movement",
+    19,
+    1,
+    97.7
+   ],
+   [
+    14,
+    "T1027 Obfuscated Files or Information",
+    "stealth",
+    19,
+    1,
+    98.3
+   ],
+   [
+    15,
+    "T1584.004 Server",
+    "resource-development",
+    10,
+    1,
+    98.9
+   ]
+  ],
+  "pick_k3": [
+   [
+    1,
+    "T1105 Ingress Tool Transfer",
+    90,
+    0.0
+   ],
+   [
+    2,
+    "T1204.002 Malicious File",
+    87,
+    0.0
+   ],
+   [
+    3,
+    "T1059.001 PowerShell",
+    86,
+    23.6
+   ],
+   [
+    4,
+    "T1588.002 Tool",
+    84,
+    34.5
+   ],
+   [
+    5,
+    "T1566.001 Spearphishing Attachment",
+    79,
+    47.7
+   ],
+   [
+    6,
+    "T1036.005 Match Legitimate Resource Name or Location",
+    66,
+    55.7
+   ],
+   [
+    7,
+    "T1059.003 Windows Command Shell",
+    73,
+    60.9
+   ],
+   [
+    8,
+    "T1078 Valid Accounts",
+    49,
+    66.1
+   ],
+   [
+    9,
+    "T1082 System Information Discovery",
+    59,
+    70.1
+   ],
+   [
+    10,
+    "T1083 File and Directory Discovery",
+    52,
+    71.3
+   ],
+   [
+    11,
+    "T1190 Exploit Public-Facing Application",
+    47,
+    73.0
+   ],
+   [
+    12,
+    "T1204.001 Malicious Link",
+    50,
+    74.1
+   ],
+   [
+    13,
+    "T1005 Data from Local System",
+    47,
+    77.0
+   ],
+   [
+    14,
+    "T1059.007 JavaScript",
+    30,
+    78.7
+   ],
+   [
+    15,
+    "T1021.002 SMB/Windows Admin Shares",
+    28,
+    79.3
+   ]
+  ],
+  "curves": {
+   "1": [
+    90,
+    121,
+    139,
+    150,
+    155,
+    158,
+    160,
+    162,
+    164,
+    166,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ],
+   "2": [
+    0,
+    56,
+    86,
+    104,
+    120,
+    129,
+    137,
+    141,
+    145,
+    150,
+    151,
+    154,
+    157,
+    158,
+    158,
+    159,
+    161,
+    161,
+    162,
+    163,
+    164,
+    165,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ],
+   "3": [
+    0,
+    0,
+    41,
+    60,
+    83,
+    97,
+    106,
+    115,
+    122,
+    124,
+    127,
+    129,
+    134,
+    137,
+    138,
+    142,
+    143,
+    145,
+    147,
+    149,
+    149,
+    150,
+    151,
+    153,
+    154,
+    154,
+    156,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    163,
+    164,
+    165,
+    166,
+    166,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ]
+  },
+  "pop_curves": {
+   "1": [
+    90,
+    121,
+    138,
+    150,
+    150,
+    155,
+    156,
+    157,
+    158,
+    161,
+    161,
+    161,
+    162,
+    163,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164,
+    164
+   ],
+   "2": [
+    0,
+    56,
+    84,
+    104,
+    118,
+    124,
+    134,
+    136,
+    136,
+    137,
+    137,
+    142,
+    144,
+    150,
+    150,
+    150,
+    151,
+    153,
+    155,
+    155,
+    155,
+    156,
+    157,
+    157,
+    157,
+    157,
+    159,
+    159,
+    159,
+    159,
+    159,
+    159,
+    159,
+    159,
+    159,
+    159,
+    159,
+    159,
+    161,
+    161,
+    161,
+    161,
+    161,
+    161,
+    163,
+    163,
+    163,
+    163,
+    163,
+    163,
+    163,
+    163
+   ],
+   "3": [
+    0,
+    0,
+    41,
+    60,
+    83,
+    98,
+    106,
+    115,
+    119,
+    121,
+    123,
+    125,
+    127,
+    132,
+    135,
+    136,
+    138,
+    140,
+    142,
+    142,
+    143,
+    144,
+    144,
+    146,
+    147,
+    148,
+    148,
+    148,
+    149,
+    149,
+    149,
+    149,
+    151,
+    151,
+    152,
+    153,
+    153,
+    154,
+    154,
+    154,
+    154,
+    154,
+    154,
+    156,
+    157,
+    157,
+    157,
+    157,
+    157,
+    158,
+    159,
+    159,
+    159,
+    159,
+    160,
+    160,
+    160,
+    160,
+    160,
+    160,
+    160,
+    161,
+    161,
+    161,
+    161,
+    161,
+    161,
+    161,
+    161
+   ]
+  },
+  "always_uncoverable_k3": 10
+ },
+ "unique_techniques": 119,
+ "coverage_detectable": {
+  "n_detectable": 435,
+  "summary": {
+   "k=1": {
+    "%80 için": 3,
+    "%90 için": 6,
+    "tamamı için": 16,
+    "10 teknikle %": 96.6,
+    "20 teknikle %": 100.0,
+    "kapsanabilen grup": 174
+   },
+   "k=3": {
+    "%80 için": 16,
+    "%90 için": 30,
+    "tamamı için": 52,
+    "10 teknikle %": 73.6,
+    "20 teknikle %": 84.5,
+    "kapsanabilen grup": 174
+   }
+  },
+  "pick_k3": [
+   [
+    1,
+    "T1105 Ingress Tool Transfer",
+    "command-and-control",
+    90,
+    1.1
+   ],
+   [
+    2,
+    "T1204.002 Malicious File",
+    "execution",
+    87,
+    1.1
+   ],
+   [
+    3,
+    "T1059.001 PowerShell",
+    "execution",
+    86,
+    24.7
+   ],
+   [
+    4,
+    "T1059.003 Windows Command Shell",
+    "execution",
+    73,
+    38.5
+   ],
+   [
+    5,
+    "T1566.001 Spearphishing Attachment",
+    "initial-access",
+    79,
+    50.0
+   ],
+   [
+    6,
+    "T1036.005 Match Legitimate Resource Name or Location",
+    "stealth",
+    66,
+    56.3
+   ],
+   [
+    7,
+    "T1078 Valid Accounts",
+    "stealth, persistence, privilege-escalation, initial-access",
+    49,
+    62.1
+   ],
+   [
+    8,
+    "T1082 System Information Discovery",
+    "discovery",
+    59,
+    67.2
+   ],
+   [
+    9,
+    "T1190 Exploit Public-Facing Application",
+    "initial-access",
+    47,
+    70.7
+   ],
+   [
+    10,
+    "T1071.001 Web Protocols",
+    "command-and-control",
+    58,
+    73.6
+   ]
+  ],
+  "pick_k1": [
+   "T1105 Ingress Tool Transfer",
+   "T1204.002 Malicious File",
+   "T1059.001 PowerShell",
+   "T1078 Valid Accounts",
+   "T1059.003 Windows Command Shell",
+   "T1083 File and Directory Discovery",
+   "T1071.001 Web Protocols",
+   "T1027.013 Encrypted/Encoded File",
+   "T1657 Financial Theft",
+   "T1564.005 Hidden File System"
+  ],
+  "curves": {
+   "1": [
+    92,
+    123,
+    140,
+    150,
+    155,
+    159,
+    162,
+    164,
+    166,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ],
+   "3": [
+    2,
+    2,
+    43,
+    67,
+    87,
+    98,
+    108,
+    117,
+    123,
+    128,
+    128,
+    130,
+    131,
+    136,
+    139,
+    142,
+    142,
+    144,
+    147,
+    147,
+    150,
+    152,
+    152,
+    154,
+    155,
+    155,
+    155,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    162,
+    163,
+    163,
+    163,
+    164,
+    165,
+    165,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ]
+  }
+ }
+}
